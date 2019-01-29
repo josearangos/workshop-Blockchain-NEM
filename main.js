@@ -33,10 +33,10 @@ let nem=require('nem-sdk').default;
 
 let endpoint=nem.model.objects.create("endpoint")(nem.model.nodes.defaultTestnet, nem.model.nodes.defaultPort);
 
-let common = nem.model.objects.create('common')('fudaxe41','68d299fb9e91a452d29e810206a00e19756eaf4c449318d4d543f379136ef56a');
+let common = nem.model.objects.create('common')('PassWallet','PrivadeKeyWallet');
 
                                                                             //direccionWallet,monto,mensaje
-let transferTransaction = nem.model.objects.create('transferTransaction')('TDARMS-EHAU45-SW2D6X-IDJA3N-2Z7ZMH-LERT4W-HL5W',2,'pa los bolis, de jose sin el tiempo');
+let transferTransaction = nem.model.objects.create('transferTransaction')('direccionWallet',monto,mess);
 
 let txEntity = nem.model.transactions.prepare('transferTransaction')(common, transferTransaction, nem.model.network.data.testnet.id);
 
